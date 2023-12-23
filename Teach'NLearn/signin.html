@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signin.css">
+    <title>Sign In</title>
+</head>
+<body>
+    <form action="">
+        <div id="container">
+            <h1>Sign In Page</h1>
+            <p id="a1">Required fields are marked with *</p>
+            <p id="a2">
+                Name= *<input type="text" name="name" id="enterName">
+            </p>
+            <fieldset id="xxx">
+                <legend id="xxxx">Gender *</legend>
+                <p>
+                    Male<input type="radio" name="gender" id="enterGenderM">
+                    Female<input type="radio" name="gender" id="enterGenderF">
+                </p>
+            </fieldset>
+            <p>
+                Date of birth *<input type="date" name="DOB" id="enterDOB">
+            </p>
+            <p>
+                Email =  *<input type="email" name="email" id="enterEmail">
+            </p>
+            <p id="a3">
+                Password= *<input type="password" name="password" id="enterPassword">
+            </p>
+            <button type="button" id="signinButton">Sign in</button>
+            <a href="login.html">Login?</a>
+        </div>
+    </form>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, get, set, child, update, remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIFBT5jLZcfWYk25NpLTRbpJ6hba8f8jk",
+            authDomain: "teachnlearn-929af.firebaseapp.com",
+            databaseURL: "https://teachnlearn-929af-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "teachnlearn-929af",
+            storageBucket: "teachnlearn-929af.appspot.com",
+            messagingSenderId: "635303505904",
+            appId: "1:635303505904:web:3071982ae94352523bf735"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        var enterEmail = document.querySelector("#enterEmail");
+        var enterPassword = document.querySelector("#enterPassword");
+        var enterName = document.querySelector("#enterName");
+        var enterDOB = document.querySelector("#enterDOB");
+        var signinButton = document.querySelector("#signinButton");
+
+        const data = {
+        Name: "",
+        Email: "",
+        Password: "",
+        Gender: "M",
+        DateOfBirth: ""
+    }
+
+        function saveData() {
+            localStorage.setItem("Name", enterName.value);
+            localStorage.setItem("Email", enterEmail.value);
+            localStorage.setItem("Password", enterPassword.value);
+            localStorage.setItem("DateOfBirth", enterDOB.value);
+        }
+
+        function Signin() {
+            get(child(ref(db), "UserData/" + enterEmail.value))
+                .then((snapshot)=>{
+                    if (snapshot.exists()) {
+                        alert("Already Exists");
+                    } else {
+                        set(ref(db, "UserData/" + enterEmail.value), {
+                            Email: enterEmail.value,
+                            Password: enterPassword.value,
+                            Name: enterName.value,
+                            Gender: "M",
+                            DateOfBirth: enterDOB.value
+                        })
+                        .then(()=>{
+                            saveData();
+                            alert("Signed in successfully");
+                            window.location.href = "home_test.html";
+                        })
+                        .catch((error)=>{
+                            alert("Error signing in: " + error.message);
+                        });
+                    }
+                })
+                .catch((error)=>{
+                    alert("Error checking email: " + error.message);
+                });
+        }
+
+
+        signinButton.addEventListener('click', Signin);
+    </script>
+</body>
+</html>

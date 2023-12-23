@@ -1,0 +1,59 @@
+body{
+    text-align: center;
+    background-color: #008080;
+    color:black;
+    font-family: "Montserrat";
+}
+h1{
+    font-size:50px;
+}
+#container{
+    border:1px solid black;
+    width:400px;
+    position:relative;
+    left:550px;
+    top:200px;
+    padding-bottom: 20px;
+    border-radius: 15px;
+    background-color: azure;
+}
+#hari{
+    font-family:"Montserrat" ;
+    border:1px solid black;
+    font-size: 14px;
+    border-radius:15px;
+    width:100px;
+    padding:7px;
+    text-align:center;
+    background-color: azure;
+    cursor: pointer;
+    overflow:hidden;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#enter_sub{
+    font-family:"Montserrat" ;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: azure;
+    width:160px;
+    padding:20px;
+    text-align:center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#008080;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow:hidden;
+  
+    border-radius:15px;
+    align-self: center;
+    border-color: #008080;
+    border-width:1px;
+    border:solid;
+}
+
+#enter_sub {
+    
+    color: black;
+}

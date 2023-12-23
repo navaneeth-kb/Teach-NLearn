@@ -1,0 +1,73 @@
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+#l1{
+    border:1px solid black;
+    
+}
+#l2{
+    position:relative;
+    left:300px;
+}
+#s4{
+    font-family:"Montserrat" ;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: azure;
+    width:160px;
+    padding:20px;
+    text-align:center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#008080;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow:hidden;
+  
+    border-radius:15px;
+    align-self: center;
+    border-color: #008080;
+    border-width:1px;
+    border:solid;
+}
+#sr{
+    padding-left:1500px;
+}
+.eee{
+    height: 20px;
+    border-color:#008080 ;
+    border-width: 1 px;
+    font-family:"Montserrat" ;
+    font-size: 18px;
+}
+.ee{
+    position:relative;
+    bottom:135px;
+    left:700px;
+    border-color:#008080 ;
+    border-width: 1 px;
+}
+#ww{
+    position:relative;
+    left:1465px;
+    bottom:135px;
+    /* bottom:900px; */
+}
+#w{
+   
+}
+#ii{
+    font-family:"Montserrat" ;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
