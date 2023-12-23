@@ -1,0 +1,145 @@
+body {
+	font-family: "Montserrat";
+}
+
+.mainDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* background-color: aqua; */
+	border-radius: 10px;
+	align-items: baseline;
+	border:solid;
+	border-width: 2px;
+	border-color: #008080;
+	border-radius: 20px;
+}
+
+.headerDiv {
+	padding: 10px;
+	align-items: center;
+	height: 50%;
+}
+
+.headerDiv > a {
+	font-family:"Pacifico";
+	font-size: 30px;
+	font-weight: bold;
+	color: #008080;
+	text-decoration: none;
+}
+
+.search-bar {
+    border: none;
+    height: 35px;
+    width: 440px;
+    padding-left: 40px;
+    margin-left: 80px;
+    border-radius: 20px;
+    background: url('search.png') no-repeat center left azure;
+	border: solid;
+	border-color: #008080;
+    background-size: 20px;
+    background-position-x: 10px;
+    transition: width 1s, height 1s;
+	position: relative;
+	bottom: 10px;
+	right: 20px;
+}
+
+.search-bar:hover, .search-bar:focus {
+    height: 40px;
+    width: 490px;
+    padding-left: 40px;
+}
+
+.profile-pic {
+    width: 40px;
+    border-radius: 26px;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 10px grey;
+    cursor: pointer;
+}
+
+.bodyDiv {
+	display: flex;
+	flex-direction: row;
+	margin: 20px;
+}
+
+.cartDiv {
+	width: 300px;
+	color: #008080;
+	background-color: #008080;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.innerCart > div {
+	margin: 20px;
+	padding: 20px;
+	border: black;
+	background-color: azure;
+	border-style: dotted;
+	border-radius: 20px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.innerCart > div:hover {
+	background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.sellDiv {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.sellDiv > div:hover {
+	background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+.sellDiv > div {
+    background-color: #008080;
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    flex: 1 1 300px;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sellDiv > div img {
+    width: auto;
+    height: auto;
+}
+
+.sellDiv > div .text-container {
+    padding: 10px;
+    color: white;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#addCart {
+	background-color: azure;
+	margin: 20px;
+    margin-top: auto;
+	padding: 20px;
+    border: black;
+    border-style: groove;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#addCart:hover {
+	background-color: hsla(0, 0%, 28%, 0.6);
+}	

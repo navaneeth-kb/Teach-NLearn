@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Market Place</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="Market.css">
+	<script src="Market.js"></script>
+</head>
+<body>
+	<div class="mainDiv" id="header">
+		<div class="headerDiv">
+			<a href="index.html">
+				TeachNLearn
+			</a>
+		</div>
+		<div class="headerDiv">
+			<input type="search" class="search-bar">
+		</div>
+		<div class="headerDiv">
+			<a>
+				<img class="profile-pic" src="userPFP.png" alt="Profile Pic">
+			</a>
+		</div>
+	</div>
+	<div class="bodyDiv">
+		<div class="cartDiv">
+			<div class="innerCart">
+				<div onclick="removeDiv(this)">
+					Physics Book
+				</div>
+			</div>
+			<div id="addCart" onclick="buyBtn()">
+				Buy now
+			</div>
+		</div>
+		<div class="sellDiv">
+			<div onclick="addDiv('Physics Book')">
+				<img src="phyBook.jfif" alt="Product Image">
+				<div class="text-container">
+					<h3>Physics Book</h3>
+					<p>Price - 150Rs</p>
+				</div>
+			</div>
+			<div onclick="addDiv('Maths Book')">
+				<img src="mathsBook.jpg" alt="Product Image">
+				<div class="text-container">
+					<h3>Maths Book</h3>
+					<p>Price - 170Rs</p>
+				</div>
+			</div>
+			<div onclick="addDiv('Geography Book')">
+				<img src="geoBook.jfif" alt="Product Image">
+				<div class="text-container">
+					<h3>Geography Book</h3>
+					<p>Price - 120Rs</p>
+				</div>
+			</div>
+			<div onclick="addDiv('Computer Science Book')">
+				<img src="compBook.jfif" alt="Product Image">
+				<div class="text-container">
+					<h3>Computer Science Book</h3>
+					<p>Price - 200Rs</p>
+				</div>
+			</div>
+			<div onclick="addDiv('English Book')">
+				<img src="engBook.webp" alt="Product Image">
+				<div class="text-container">
+					<h3>English Book</h3>
+					<p>Price - 140Rs</p>
+				</div>
+			</div>
+			<div onclick="addDiv('Commerce Book')">
+				<img src="comBook.jpg" alt="Product Image">
+				<div class="text-container">
+					<h3>Commerce Book</h3>
+					<p>Price - 210Rs</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
