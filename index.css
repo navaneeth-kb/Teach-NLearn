@@ -81,6 +81,16 @@ body{
         position: relative;
         top:60px;
     }
+    body{
+        background-image:linear-gradient(
+            #008080 53%,
+            azure 53%,
+            azure
+            );
+        font-family:"Montserrat";
+        font-weight:180px; 
+        overflow-x: hidden;
+    }
     #nav_head{
         display: flex;
         justify-content: space-between;
@@ -99,7 +109,7 @@ body{
         justify-content: center;
         position: relative;
         bottom:50px;
-        height:150vh;
+        height:140vh;
     }
     #hero_buttons{
         gap:10px;
