@@ -107,9 +107,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* position: relative;
-        bottom:50px;
-        height:100vh; */
+        height:115vh; 
     }
     #hero_buttons{
         gap:10px;
