@@ -1,0 +1,119 @@
+h1{
+    color:azure;
+    font-family:"Pacifico";
+    font-size:110PX;
+}
+#cpt{
+    color:azure;
+    font-weight:bold;
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+}
+body{
+    background-image:linear-gradient(
+        #008080 48%,
+        azure 48%,
+        azure
+        );
+    font-family:"Montserrat";
+    font-weight:180px; 
+    overflow-x: hidden;
+}
+#hero_content{
+    position: relative;
+    left:100px;
+}
+#hero{
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content:space-between;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#hero_buttons{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    position: relative;
+    right:200px;
+}
+.hero_buttons{
+    font-family:"Montserrat" ;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: azure;
+    width:160px;
+    text-align:center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#008080;
+    cursor: pointer;
+    overflow:hidden;
+    border:none;
+    border-radius:15px;
+    height:60px;
+}
+#nav_head{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid black;
+    border-radius: 20px;
+    width:auto;
+}
+#head_bts{
+    padding: 15px;
+}
+
+@media screen and (max-width:480px){
+    h1{
+        color:azure;
+        font-family:"Pacifico";
+        font-size:70PX;
+        position: relative;
+        top:60px;
+    }
+    #nav_head{
+        display: flex;
+        justify-content: space-between;
+        border:1px solid black;
+        border-radius: 20px;
+        width:600px;
+    }
+    #cpt{
+        font-size:14px ;
+        position: relative;
+        top: 1px;
+    }
+    #hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        bottom:50px;
+        height:150vh;
+    }
+    #hero_buttons{
+        gap:10px;
+        
+    }
+    .hero_buttons{
+        font-size: 12px;
+        width:100px;
+        border-radius:15px;
+        height:50px;
+        position: relative;
+        left:270px;
+    }
+    #content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width:600px;
+    }
+}
