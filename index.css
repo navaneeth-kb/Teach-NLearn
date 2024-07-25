@@ -109,7 +109,7 @@ body{
         justify-content: center;
         position: relative;
         bottom:50px;
-        height:120vh;
+        height:100vh;
     }
     #hero_buttons{
         gap:10px;
